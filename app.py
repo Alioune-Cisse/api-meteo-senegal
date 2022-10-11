@@ -5,10 +5,15 @@ from datetime import datetime, timedelta
 from meteostat import Point, Daily, Stations, Hourly, Monthly
 import json
 import ast
+import sys
 
 #donnees = getdata()
 
 app = Flask(__name__)
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
+
 app.config["DEBUG"] = True
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
