@@ -28,7 +28,7 @@ def index():
 
 
 
-@app.route('/api/v1')
+@app.route('/api/v1', methods=['GET', 'POST'])
 def my_route():
     
   date1 = (datetime.now() - timedelta(days=7)).strftime('%d/%m/%Y %H:%M:%S')
@@ -50,7 +50,7 @@ def my_route():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=3000)
 
 
 
