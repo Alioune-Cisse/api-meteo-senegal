@@ -1,1 +1,1 @@
-web: gunicorn -t 500  app:app --bind 0.0.0.0:${PORT}
+web: gunicorn --bind 127.0.0.1:5000 app:app
