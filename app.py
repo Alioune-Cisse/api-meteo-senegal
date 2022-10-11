@@ -6,6 +6,7 @@ from meteostat import Point, Daily, Stations, Hourly, Monthly
 import json
 import ast
 import sys
+import logging
 
 #donnees = getdata()
 
