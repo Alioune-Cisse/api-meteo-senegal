@@ -24,13 +24,7 @@ def index():
 
 @app.route('/api/v1')
 def my_route():
-  """budget = request.args["budget"]#.get('budget', default = 1200000, type = int)
-  services = request.args["services"]#.get('services', default = ["Traiteur", "Photo"], type = str)
-  services = ast.literal_eval(services)
-  invites = request.args.get('invites', default=100, type=int)
-  print(f'services = {services}\nTypes = {type(services)}')
-  repartitions = repartition(optimiser_depense(int(budget),  services))
-  print(f'RB = {Response(budget)}')"""
+    
   date1 = (datetime.now() - timedelta(days=7)).strftime('%d/%m/%Y %H:%M:%S')
   date2 = (datetime.now() + timedelta(hours=12)).strftime('%d/%m/%Y %H:%M:%S')
 
