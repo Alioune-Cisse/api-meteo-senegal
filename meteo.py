@@ -1,4 +1,4 @@
-from geopy.geocoders import Nominatim
+#from geopy.geocoders import Nominatim
 import pandas as pd
 from datetime import datetime, timedelta
 from meteostat import Point, Daily, Stations, Hourly, Monthly
