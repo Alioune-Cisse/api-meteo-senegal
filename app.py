@@ -6,6 +6,7 @@ from meteostat import Point, Daily, Stations, Hourly, Monthly
 import json
 import ast
 import sys
+import os
 import logging
 
 #donnees = getdata()
@@ -50,7 +51,8 @@ def my_route():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=3000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
 
 
 
