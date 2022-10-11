@@ -42,9 +42,14 @@ def my_route():
   start = datetime.strptime(start_date, '%d/%m/%Y %H:%M:%S')
   end = datetime.strptime(end_date, '%d/%m/%Y %H:%M:%S')
 
-  moment = (momentum == "hour" and Hourly) or (momentum == "day" and Daily) or (momentum == "month" and Monthly)
-  print(moment)
-  repartitions = weather(moment=moment, start=start, end=end)
+  try:
+      moment = (momentum == "hour" and Hourly) or (momentum == "day" and Daily) or (momentum == "month" and Monthly) or 'hour'
+      #print(moment)
+      repartitions = weather(moment=moment, start=start, end=end)
+  except:
+      repartitions = {"Erreur":404, "Source":"Vérifier avec vos paramètres si vous avez bien respeecté les propriétés. Vous pouvez vous référer à la documentation", "lien":"https://senegalmeteo.herokuapp.com/"}
+        
+  
   response = jsonify(repartitions)
   response.headers.add('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS')
   return response
