@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 from meteostat import Point, Daily, Stations, Hourly, Monthly
 #from get_coordonees import get_coordonnees
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 
 
