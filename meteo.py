@@ -44,7 +44,9 @@ def weather(moment=Hourly, start=start, end=end):
 
           data1 = data1.append(data)
           #print(data.head(5))
-    return data1.sort_index().to_dict('list')
+    data1 = data1.sort_index()
+    data1 = data1.rename_axis('Date').reset_index()
+    return data1.to_dict('list')
 
 
 
