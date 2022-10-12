@@ -54,7 +54,7 @@
 </div>
 <div>
     <h3>Sorties : Format JSON</h3>
-    <table class="table table-bordered res">
+    <table class="table table-bordered">
     <thead>
       <tr>
         <th>Variables</th>
@@ -94,17 +94,17 @@
         <td>numeric</td>
       </tr>
     <tr>
-        <td>tavg</td>
+        <td>tavg #$</td>
         <td>La température moyenne de l'air en °C</td>
         <td>numeric</td>
       </tr>
     <tr>
-        <td>tmin</td>
+        <td>tmin #$</td>
         <td>La température minimale de l'air en °C</td>
         <td>numeric</td>
       </tr>
     <tr>
-        <td>tmax</td>
+        <td>tmax #$</td>
         <td>La température maximale de l'air en °C</td>
         <td>numeric</td>
       </tr>
@@ -114,12 +114,12 @@
         <td>numeric</td>
       </tr>
     <tr>
-        <td>snow</td>
+        <td>snow @#</td>
         <td>L'épaisseur maximale de neige en mm</td>
         <td>numeric</td>
       </tr>
     <tr>
-        <td>wdir</td>
+        <td>wdir @#</td>
         <td>La direction moyenne du vent en °C</td>
         <td>numeric</td>
       </tr>
@@ -129,7 +129,7 @@
         <td>numeric</td>
       </tr>
     <tr>
-        <td>wpgt</td>
+        <td>wpgt @#</td>
         <td>La rafale de vent maximale en km/h</td>
         <td>numeric</td>
       </tr>
@@ -143,8 +143,31 @@
         <td>L'ensoleillement quotidien total en minutes (m)</td>
         <td>numeric</td>
       </tr>
+      <tr>
+        <td>dwpt @</td>
+        <td>Le point de rosée en °C</td>
+        <td>numeric</td>
+      </tr>
+      <tr>
+        <td>temp @</td>
+        <td>La température de l'air en °C</td>
+        <td>numeric</td>
+      </tr>
+      <tr>
+        <td>rhum @</td>
+        <td>L'humidité relative en pourcentage (%)</td>
+        <td>numeric</td>
+      </tr>
+      <tr>
+        <td>coco @</td>
+        <td>Le code des conditions météorologiques</td>
+        <td>numeric</td>
+      </tr>
     </tbody>
   </table>
+  <p><b>@</b> : Se trouvant uniquement dans hour</p>
+  <p><b>#</b> : Se trouvant uniquement dans day</p>
+  <p><b>$</b> : Se trouvant uniquement dans month</p>
 </div>
 
 </body>
